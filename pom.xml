@@ -6,7 +6,7 @@
 
     <groupId>io.tokenchannel</groupId>
     <artifactId>tokenchannel-java</artifactId>
-    <version>0.10-SNAPSHOT</version>
+    <version>0.11-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
