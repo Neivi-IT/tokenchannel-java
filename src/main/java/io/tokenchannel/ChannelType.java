@@ -15,5 +15,5 @@
 package io.tokenchannel;
 
 public enum ChannelType {
-    SMS, EMAIL, PUSHOVER, VOICE;
+    SMS, EMAIL, PUSHOVER, VOICE, TELEGRAM;
 }
