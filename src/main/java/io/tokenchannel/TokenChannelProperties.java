@@ -19,4 +19,5 @@ import lombok.Data;
 public class TokenChannelProperties {
     private String apiKey;
     private Boolean testMode;
+    private Integer timeoutInSeconds=30;
 }

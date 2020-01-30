@@ -209,8 +209,9 @@ public class TokenChannel {
 
         con.setDoOutput(true);
 
-        con.setConnectTimeout(30000);
-        con.setReadTimeout(30000);
+        int timeout = this.properties.getTimeoutInSeconds()*1000;
+        con.setConnectTimeout(timeout);
+        con.setReadTimeout(timeout);
 
         con.setRequestMethod(httpMethod);
 
