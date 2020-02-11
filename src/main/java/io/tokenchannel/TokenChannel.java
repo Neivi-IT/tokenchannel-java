@@ -198,6 +198,23 @@ public class TokenChannel {
         }
     }
 
+    /**
+     * Retrieves the Whatsapp pricing list for supported countries
+     *
+     * @throws QuotaExceededException whether QPS o QPM have been exceeded
+     */
+    public List<WhatsappPriceItem> getWhatsappPrices() {
+
+        final String uri = String.format("%s/pricing/whatsapp", TOKENCHANNEL_BASE_URI);
+
+        try {
+            HttpURLConnection con = this.buildConnection(uri, "GET");
+            return Arrays.asList(this.processResponse(con, WhatsappPriceItem[].class));
+        } catch (IOException e) {
+            throw new TokenChannelException(e);
+        }
+    }
+
     private HttpURLConnection buildConnection(String uri, String httpMethod) throws IOException {
         URL url = new URL(uri);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
