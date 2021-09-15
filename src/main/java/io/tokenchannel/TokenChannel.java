@@ -35,7 +35,11 @@ public class TokenChannel {
     private final TokenChannelProperties properties;
     private final Gson gson;
 
-    public TokenChannel(TokenChannelProperties properties, Gson gson) {
+    public TokenChannel(TokenChannelProperties properties) {
+        this(properties, new Gson());
+    }
+
+    private TokenChannel(TokenChannelProperties properties, Gson gson) {
         this.properties = properties;
         this.gson = gson;
     }

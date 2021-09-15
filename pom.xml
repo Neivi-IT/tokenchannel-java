@@ -6,7 +6,7 @@
 
     <groupId>io.tokenchannel</groupId>
     <artifactId>tokenchannel-java</artifactId>
-    <version>0.14-SNAPSHOT</version>
+    <version>0.15.RELEASE</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -53,7 +53,6 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
